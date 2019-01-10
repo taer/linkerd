@@ -10,7 +10,7 @@ object BufSerializers {
 
   def ipv4(addr: Buf): String = {
     val bytes = Buf.ByteArray.coerce(addr)
-    s"${bytes.get(0)}.${bytes.get(1)}.${bytes.get(2)}.${bytes.get(3)}"
+    s"${bytes.get(0).toInt}.${bytes.get(1).toInt}.${bytes.get(2).toInt}.${bytes.get(3).toInt}"
   }
 
 }
